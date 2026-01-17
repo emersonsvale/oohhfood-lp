@@ -6,7 +6,7 @@ yarn-error.log*
 
 # Build outputs
 .nuxt
-.output
+# .output - NÃO ignorar, necessário para deploy (build pré-compilado)
 .nitro
 .cache
 dist

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://oohhfood.com.br/sitemap.xml
+
+# Crawl-delay (opcional, ajuste conforme necessário)
+Crawl-delay: 1

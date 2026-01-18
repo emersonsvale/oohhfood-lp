@@ -1,0 +1,1 @@
+import{_ as s,x as t,y as c,a2 as n}from"./U2GGu-8S.js";const o={},r={class:"min-h-screen bg-white"};function a(e,_){return c(),t("div",r,[n(e.$slots,"default")])}const d=s(o,[["render",a]]);export{d as default};

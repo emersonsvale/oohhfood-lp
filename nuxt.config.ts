@@ -6,6 +6,15 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss'
   ],
   css: ['~/assets/css/main.css'],
+  runtimeConfig: {
+    // Variáveis privadas (apenas servidor)
+    supabaseServiceKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
+    // Variáveis públicas (disponíveis no cliente e servidor)
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL || 'https://baexcsepiwkdlkitfcaf.supabase.co',
+      supabaseAnonKey: process.env.SUPABASE_ANON_KEY || ''
+    }
+  },
   app: {
     head: {
       htmlAttrs: {

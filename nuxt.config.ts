@@ -67,6 +67,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'canonical', href: 'https://oohhfood.com.br' },
         { rel: 'alternate', hreflang: 'pt-BR', href: 'https://oohhfood.com.br' },
         { rel: 'apple-touch-icon', href: '/logo.png' },

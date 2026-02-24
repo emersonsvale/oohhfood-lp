@@ -667,7 +667,7 @@ const defuFn = createDefu((object, key, currentValue) => {
   }
 });
 
-function o(n){throw new Error(`${n} is not implemented yet!`)}let i$1 = class i extends EventEmitter{__unenv__={};readableEncoding=null;readableEnded=true;readableFlowing=false;readableHighWaterMark=0;readableLength=0;readableObjectMode=false;readableAborted=false;readableDidRead=false;closed=false;errored=null;readable=false;destroyed=false;static from(e,t){return new i(t)}constructor(e){super();}_read(e){}read(e){}setEncoding(e){return this}pause(){return this}resume(){return this}isPaused(){return  true}unpipe(e){return this}unshift(e,t){}wrap(e){return this}push(e,t){return  false}_destroy(e,t){this.removeAllListeners();}destroy(e){return this.destroyed=true,this._destroy(e),this}pipe(e,t){return {}}compose(e,t){throw new Error("Method not implemented.")}[Symbol.asyncDispose](){return this.destroy(),Promise.resolve()}async*[Symbol.asyncIterator](){throw o("Readable.asyncIterator")}iterator(e){throw o("Readable.iterator")}map(e,t){throw o("Readable.map")}filter(e,t){throw o("Readable.filter")}forEach(e,t){throw o("Readable.forEach")}reduce(e,t,r){throw o("Readable.reduce")}find(e,t){throw o("Readable.find")}findIndex(e,t){throw o("Readable.findIndex")}some(e,t){throw o("Readable.some")}toArray(e){throw o("Readable.toArray")}every(e,t){throw o("Readable.every")}flatMap(e,t){throw o("Readable.flatMap")}drop(e,t){throw o("Readable.drop")}take(e,t){throw o("Readable.take")}asIndexedPairs(e){throw o("Readable.asIndexedPairs")}};let l$1 = class l extends EventEmitter{__unenv__={};writable=true;writableEnded=false;writableFinished=false;writableHighWaterMark=0;writableLength=0;writableObjectMode=false;writableCorked=0;closed=false;errored=null;writableNeedDrain=false;writableAborted=false;destroyed=false;_data;_encoding="utf8";constructor(e){super();}pipe(e,t){return {}}_write(e,t,r){if(this.writableEnded){r&&r();return}if(this._data===void 0)this._data=e;else {const s=typeof this._data=="string"?Buffer$1.from(this._data,this._encoding||t||"utf8"):this._data,a=typeof e=="string"?Buffer$1.from(e,t||this._encoding||"utf8"):e;this._data=Buffer$1.concat([s,a]);}this._encoding=t,r&&r();}_writev(e,t){}_destroy(e,t){}_final(e){}write(e,t,r){const s=typeof t=="string"?this._encoding:"utf8",a=typeof t=="function"?t:typeof r=="function"?r:void 0;return this._write(e,s,a),true}setDefaultEncoding(e){return this}end(e,t,r){const s=typeof e=="function"?e:typeof t=="function"?t:typeof r=="function"?r:void 0;if(this.writableEnded)return s&&s(),this;const a=e===s?void 0:e;if(a){const u=t===s?void 0:t;this.write(a,u,s);}return this.writableEnded=true,this.writableFinished=true,this.emit("close"),this.emit("finish"),this}cork(){}uncork(){}destroy(e){return this.destroyed=true,delete this._data,this.removeAllListeners(),this}compose(e,t){throw new Error("Method not implemented.")}[Symbol.asyncDispose](){return Promise.resolve()}};const c=class{allowHalfOpen=true;_destroy;constructor(e=new i$1,t=new l$1){Object.assign(this,e),Object.assign(this,t),this._destroy=m(e._destroy,t._destroy);}};function _(){return Object.assign(c.prototype,i$1.prototype),Object.assign(c.prototype,l$1.prototype),c}function m(...n){return function(...e){for(const t of n)t(...e);}}const g=_();class A extends g{__unenv__={};bufferSize=0;bytesRead=0;bytesWritten=0;connecting=false;destroyed=false;pending=false;localAddress="";localPort=0;remoteAddress="";remoteFamily="";remotePort=0;autoSelectFamilyAttemptedAddresses=[];readyState="readOnly";constructor(e){super();}write(e,t,r){return  false}connect(e,t,r){return this}end(e,t,r){return this}setEncoding(e){return this}pause(){return this}resume(){return this}setTimeout(e,t){return this}setNoDelay(e){return this}setKeepAlive(e,t){return this}address(){return {}}unref(){return this}ref(){return this}destroySoon(){this.destroy();}resetAndDestroy(){const e=new Error("ERR_SOCKET_CLOSED");return e.code="ERR_SOCKET_CLOSED",this.destroy(e),this}}class y extends i$1{aborted=false;httpVersion="1.1";httpVersionMajor=1;httpVersionMinor=1;complete=true;connection;socket;headers={};trailers={};method="GET";url="/";statusCode=200;statusMessage="";closed=false;errored=null;readable=false;constructor(e){super(),this.socket=this.connection=e||new A;}get rawHeaders(){const e=this.headers,t=[];for(const r in e)if(Array.isArray(e[r]))for(const s of e[r])t.push(r,s);else t.push(r,e[r]);return t}get rawTrailers(){return []}setTimeout(e,t){return this}get headersDistinct(){return p(this.headers)}get trailersDistinct(){return p(this.trailers)}}function p(n){const e={};for(const[t,r]of Object.entries(n))t&&(e[t]=(Array.isArray(r)?r:[r]).filter(Boolean));return e}class w extends l$1{statusCode=200;statusMessage="";upgrading=false;chunkedEncoding=false;shouldKeepAlive=false;useChunkedEncodingByDefault=false;sendDate=false;finished=false;headersSent=false;strictContentLength=false;connection=null;socket=null;req;_headers={};constructor(e){super(),this.req=e;}assignSocket(e){e._httpMessage=this,this.socket=e,this.connection=e,this.emit("socket",e),this._flush();}_flush(){this.flushHeaders();}detachSocket(e){}writeContinue(e){}writeHead(e,t,r){e&&(this.statusCode=e),typeof t=="string"&&(this.statusMessage=t,t=void 0);const s=r||t;if(s&&!Array.isArray(s))for(const a in s)this.setHeader(a,s[a]);return this.headersSent=true,this}writeProcessing(){}setTimeout(e,t){return this}appendHeader(e,t){e=e.toLowerCase();const r=this._headers[e],s=[...Array.isArray(r)?r:[r],...Array.isArray(t)?t:[t]].filter(Boolean);return this._headers[e]=s.length>1?s:s[0],this}setHeader(e,t){return this._headers[e.toLowerCase()]=t,this}setHeaders(e){for(const[t,r]of Object.entries(e))this.setHeader(t,r);return this}getHeader(e){return this._headers[e.toLowerCase()]}getHeaders(){return this._headers}getHeaderNames(){return Object.keys(this._headers)}hasHeader(e){return e.toLowerCase()in this._headers}removeHeader(e){delete this._headers[e.toLowerCase()];}addTrailers(e){}flushHeaders(){}writeEarlyHints(e,t){typeof t=="function"&&t();}}const E=(()=>{const n=function(){};return n.prototype=Object.create(null),n})();function R(n={}){const e=new E,t=Array.isArray(n)||H(n)?n:Object.entries(n);for(const[r,s]of t)if(s){if(e[r]===void 0){e[r]=s;continue}e[r]=[...Array.isArray(e[r])?e[r]:[e[r]],...Array.isArray(s)?s:[s]];}return e}function H(n){return typeof n?.entries=="function"}function v(n={}){if(n instanceof Headers)return n;const e=new Headers;for(const[t,r]of Object.entries(n))if(r!==void 0){if(Array.isArray(r)){for(const s of r)e.append(t,String(s));continue}e.set(t,String(r));}return e}const S=new Set([101,204,205,304]);async function b(n,e){const t=new y,r=new w(t);t.url=e.url?.toString()||"/";let s;if(!t.url.startsWith("/")){const d=new URL(t.url);s=d.host,t.url=d.pathname+d.search+d.hash;}t.method=e.method||"GET",t.headers=R(e.headers||{}),t.headers.host||(t.headers.host=e.host||s||"localhost"),t.connection.encrypted=t.connection.encrypted||e.protocol==="https",t.body=e.body||null,t.__unenv__=e.context,await n(t,r);let a=r._data;(S.has(r.statusCode)||t.method.toUpperCase()==="HEAD")&&(a=null,delete r._headers["content-length"]);const u={status:r.statusCode,statusText:r.statusMessage,headers:r._headers,body:a};return t.destroy(),r.destroy(),u}async function C(n,e,t={}){try{const r=await b(n,{url:e,...t});return new Response(r.body,{status:r.status,statusText:r.statusText,headers:v(r.headers)})}catch(r){return new Response(r.toString(),{status:Number.parseInt(r.statusCode||r.code)||500,statusText:r.statusText})}}
+function o(n){throw new Error(`${n} is not implemented yet!`)}let i$1 = class i extends EventEmitter{__unenv__={};readableEncoding=null;readableEnded=true;readableFlowing=false;readableHighWaterMark=0;readableLength=0;readableObjectMode=false;readableAborted=false;readableDidRead=false;closed=false;errored=null;readable=false;destroyed=false;static from(e,t){return new i(t)}constructor(e){super();}_read(e){}read(e){}setEncoding(e){return this}pause(){return this}resume(){return this}isPaused(){return  true}unpipe(e){return this}unshift(e,t){}wrap(e){return this}push(e,t){return  false}_destroy(e,t){this.removeAllListeners();}destroy(e){return this.destroyed=true,this._destroy(e),this}pipe(e,t){return {}}compose(e,t){throw new Error("Method not implemented.")}[Symbol.asyncDispose](){return this.destroy(),Promise.resolve()}async*[Symbol.asyncIterator](){throw o("Readable.asyncIterator")}iterator(e){throw o("Readable.iterator")}map(e,t){throw o("Readable.map")}filter(e,t){throw o("Readable.filter")}forEach(e,t){throw o("Readable.forEach")}reduce(e,t,r){throw o("Readable.reduce")}find(e,t){throw o("Readable.find")}findIndex(e,t){throw o("Readable.findIndex")}some(e,t){throw o("Readable.some")}toArray(e){throw o("Readable.toArray")}every(e,t){throw o("Readable.every")}flatMap(e,t){throw o("Readable.flatMap")}drop(e,t){throw o("Readable.drop")}take(e,t){throw o("Readable.take")}asIndexedPairs(e){throw o("Readable.asIndexedPairs")}};let l$1 = class l extends EventEmitter{__unenv__={};writable=true;writableEnded=false;writableFinished=false;writableHighWaterMark=0;writableLength=0;writableObjectMode=false;writableCorked=0;closed=false;errored=null;writableNeedDrain=false;writableAborted=false;destroyed=false;_data;_encoding="utf8";constructor(e){super();}pipe(e,t){return {}}_write(e,t,r){if(this.writableEnded){r&&r();return}if(this._data===void 0)this._data=e;else {const s=typeof this._data=="string"?Buffer$1.from(this._data,this._encoding||t||"utf8"):this._data,a=typeof e=="string"?Buffer$1.from(e,t||this._encoding||"utf8"):e;this._data=Buffer$1.concat([s,a]);}this._encoding=t,r&&r();}_writev(e,t){}_destroy(e,t){}_final(e){}write(e,t,r){const s=typeof t=="string"?this._encoding:"utf8",a=typeof t=="function"?t:typeof r=="function"?r:void 0;return this._write(e,s,a),true}setDefaultEncoding(e){return this}end(e,t,r){const s=typeof e=="function"?e:typeof t=="function"?t:typeof r=="function"?r:void 0;if(this.writableEnded)return s&&s(),this;const a=e===s?void 0:e;if(a){const u=t===s?void 0:t;this.write(a,u,s);}return this.writableEnded=true,this.writableFinished=true,this.emit("close"),this.emit("finish"),this}cork(){}uncork(){}destroy(e){return this.destroyed=true,delete this._data,this.removeAllListeners(),this}compose(e,t){throw new Error("Method not implemented.")}[Symbol.asyncDispose](){return Promise.resolve()}};const c$1=class c{allowHalfOpen=true;_destroy;constructor(e=new i$1,t=new l$1){Object.assign(this,e),Object.assign(this,t),this._destroy=m(e._destroy,t._destroy);}};function _(){return Object.assign(c$1.prototype,i$1.prototype),Object.assign(c$1.prototype,l$1.prototype),c$1}function m(...n){return function(...e){for(const t of n)t(...e);}}const g=_();class A extends g{__unenv__={};bufferSize=0;bytesRead=0;bytesWritten=0;connecting=false;destroyed=false;pending=false;localAddress="";localPort=0;remoteAddress="";remoteFamily="";remotePort=0;autoSelectFamilyAttemptedAddresses=[];readyState="readOnly";constructor(e){super();}write(e,t,r){return  false}connect(e,t,r){return this}end(e,t,r){return this}setEncoding(e){return this}pause(){return this}resume(){return this}setTimeout(e,t){return this}setNoDelay(e){return this}setKeepAlive(e,t){return this}address(){return {}}unref(){return this}ref(){return this}destroySoon(){this.destroy();}resetAndDestroy(){const e=new Error("ERR_SOCKET_CLOSED");return e.code="ERR_SOCKET_CLOSED",this.destroy(e),this}}class y extends i$1{aborted=false;httpVersion="1.1";httpVersionMajor=1;httpVersionMinor=1;complete=true;connection;socket;headers={};trailers={};method="GET";url="/";statusCode=200;statusMessage="";closed=false;errored=null;readable=false;constructor(e){super(),this.socket=this.connection=e||new A;}get rawHeaders(){const e=this.headers,t=[];for(const r in e)if(Array.isArray(e[r]))for(const s of e[r])t.push(r,s);else t.push(r,e[r]);return t}get rawTrailers(){return []}setTimeout(e,t){return this}get headersDistinct(){return p(this.headers)}get trailersDistinct(){return p(this.trailers)}}function p(n){const e={};for(const[t,r]of Object.entries(n))t&&(e[t]=(Array.isArray(r)?r:[r]).filter(Boolean));return e}class w extends l$1{statusCode=200;statusMessage="";upgrading=false;chunkedEncoding=false;shouldKeepAlive=false;useChunkedEncodingByDefault=false;sendDate=false;finished=false;headersSent=false;strictContentLength=false;connection=null;socket=null;req;_headers={};constructor(e){super(),this.req=e;}assignSocket(e){e._httpMessage=this,this.socket=e,this.connection=e,this.emit("socket",e),this._flush();}_flush(){this.flushHeaders();}detachSocket(e){}writeContinue(e){}writeHead(e,t,r){e&&(this.statusCode=e),typeof t=="string"&&(this.statusMessage=t,t=void 0);const s=r||t;if(s&&!Array.isArray(s))for(const a in s)this.setHeader(a,s[a]);return this.headersSent=true,this}writeProcessing(){}setTimeout(e,t){return this}appendHeader(e,t){e=e.toLowerCase();const r=this._headers[e],s=[...Array.isArray(r)?r:[r],...Array.isArray(t)?t:[t]].filter(Boolean);return this._headers[e]=s.length>1?s:s[0],this}setHeader(e,t){return this._headers[e.toLowerCase()]=t,this}setHeaders(e){for(const[t,r]of Object.entries(e))this.setHeader(t,r);return this}getHeader(e){return this._headers[e.toLowerCase()]}getHeaders(){return this._headers}getHeaderNames(){return Object.keys(this._headers)}hasHeader(e){return e.toLowerCase()in this._headers}removeHeader(e){delete this._headers[e.toLowerCase()];}addTrailers(e){}flushHeaders(){}writeEarlyHints(e,t){typeof t=="function"&&t();}}const E=(()=>{const n=function(){};return n.prototype=Object.create(null),n})();function R(n={}){const e=new E,t=Array.isArray(n)||H(n)?n:Object.entries(n);for(const[r,s]of t)if(s){if(e[r]===void 0){e[r]=s;continue}e[r]=[...Array.isArray(e[r])?e[r]:[e[r]],...Array.isArray(s)?s:[s]];}return e}function H(n){return typeof n?.entries=="function"}function v(n={}){if(n instanceof Headers)return n;const e=new Headers;for(const[t,r]of Object.entries(n))if(r!==void 0){if(Array.isArray(r)){for(const s of r)e.append(t,String(s));continue}e.set(t,String(r));}return e}const S=new Set([101,204,205,304]);async function b(n,e){const t=new y,r=new w(t);t.url=e.url?.toString()||"/";let s;if(!t.url.startsWith("/")){const d=new URL(t.url);s=d.host,t.url=d.pathname+d.search+d.hash;}t.method=e.method||"GET",t.headers=R(e.headers||{}),t.headers.host||(t.headers.host=e.host||s||"localhost"),t.connection.encrypted=t.connection.encrypted||e.protocol==="https",t.body=e.body||null,t.__unenv__=e.context,await n(t,r);let a=r._data;(S.has(r.statusCode)||t.method.toUpperCase()==="HEAD")&&(a=null,delete r._headers["content-length"]);const u={status:r.statusCode,statusText:r.statusMessage,headers:r._headers,body:a};return t.destroy(),r.destroy(),u}async function C(n,e,t={}){try{const r=await b(n,{url:e,...t});return new Response(r.body,{status:r.status,statusText:r.statusText,headers:v(r.headers)})}catch(r){return new Response(r.toString(),{status:Number.parseInt(r.statusCode||r.code)||500,statusText:r.statusText})}}
 
 function hasProp(obj, prop) {
   try {
@@ -3310,7 +3310,13 @@ function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
 }
 
+function serialize$1(o){return typeof o=="string"?`'${o}'`:new c().serialize(o)}const c=/*@__PURE__*/function(){class o{#t=new Map;compare(t,r){const e=typeof t,n=typeof r;return e==="string"&&n==="string"?t.localeCompare(r):e==="number"&&n==="number"?t-r:String.prototype.localeCompare.call(this.serialize(t,true),this.serialize(r,true))}serialize(t,r){if(t===null)return "null";switch(typeof t){case "string":return r?t:`'${t}'`;case "bigint":return `${t}n`;case "object":return this.$object(t);case "function":return this.$function(t)}return String(t)}serializeObject(t){const r=Object.prototype.toString.call(t);if(r!=="[object Object]")return this.serializeBuiltInType(r.length<10?`unknown:${r}`:r.slice(8,-1),t);const e=t.constructor,n=e===Object||e===void 0?"":e.name;if(n!==""&&globalThis[n]===e)return this.serializeBuiltInType(n,t);if(typeof t.toJSON=="function"){const i=t.toJSON();return n+(i!==null&&typeof i=="object"?this.$object(i):`(${this.serialize(i)})`)}return this.serializeObjectEntries(n,Object.entries(t))}serializeBuiltInType(t,r){const e=this["$"+t];if(e)return e.call(this,r);if(typeof r?.entries=="function")return this.serializeObjectEntries(t,r.entries());throw new Error(`Cannot serialize ${t}`)}serializeObjectEntries(t,r){const e=Array.from(r).sort((i,a)=>this.compare(i[0],a[0]));let n=`${t}{`;for(let i=0;i<e.length;i++){const[a,l]=e[i];n+=`${this.serialize(a,true)}:${this.serialize(l)}`,i<e.length-1&&(n+=",");}return n+"}"}$object(t){let r=this.#t.get(t);return r===void 0&&(this.#t.set(t,`#${this.#t.size}`),r=this.serializeObject(t),this.#t.set(t,r)),r}$function(t){const r=Function.prototype.toString.call(t);return r.slice(-15)==="[native code] }"?`${t.name||""}()[native]`:`${t.name}(${t.length})${r.replace(/\s*\n\s*/g,"")}`}$Array(t){let r="[";for(let e=0;e<t.length;e++)r+=this.serialize(t[e]),e<t.length-1&&(r+=",");return r+"]"}$Date(t){try{return `Date(${t.toISOString()})`}catch{return "Date(null)"}}$ArrayBuffer(t){return `ArrayBuffer[${new Uint8Array(t).join(",")}]`}$Set(t){return `Set${this.$Array(Array.from(t).sort((r,e)=>this.compare(r,e)))}`}$Map(t){return this.serializeObjectEntries("Map",t.entries())}}for(const s of ["Error","RegExp","URL"])o.prototype["$"+s]=function(t){return `${s}(${t})`};for(const s of ["Int8Array","Uint8Array","Uint8ClampedArray","Int16Array","Uint16Array","Int32Array","Uint32Array","Float32Array","Float64Array"])o.prototype["$"+s]=function(t){return `${s}[${t.join(",")}]`};for(const s of ["BigInt64Array","BigUint64Array"])o.prototype["$"+s]=function(t){return `${s}[${t.join("n,")}${t.length>0?"n":""}]`};return o}();
+
 const e=globalThis.process?.getBuiltinModule?.("crypto")?.hash,r="sha256",s="base64url";function digest(t){if(e)return e(r,t,s);const o=createHash(r).update(t);return globalThis.process?.versions?.webcontainer?o.digest().toString(s):o.digest(s)}
+
+function hash$1(input) {
+  return digest(serialize$1(input));
+}
 
 const Hasher = /* @__PURE__ */ (() => {
   class Hasher2 {
@@ -4016,7 +4022,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "fedfe9a7-3a7a-404f-8afb-295a63310503",
+    "buildId": "4d5099c2-f51a-48f2-ae7b-19a04d90df09",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4047,7 +4053,7 @@ const _inlineRuntimeConfig = {
     "supabaseUrl": "https://baexcsepiwkdlkitfcaf.supabase.co",
     "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJhZXhjc2VwaXdrZGxraXRmY2FmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk1MTk3MTcsImV4cCI6MjA3NTA5NTcxN30.bsBV19xrtW8TGc9EBvKy6CJBaUJUs2stmjrqGJzqKN4"
   },
-  "supabaseServiceKey": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJhZXhjc2VwaXdrZGxraXRmY2FmIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTUxOTcxNywiZXhwIjoyMDc1MDk1NzE3fQ.XmFbtcOoP79Y1GVx8ov-Pl0pmJQCcQvqSZidZNsOU0w"
+  "supabaseServiceKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJhZXhjc2VwaXdrZGxraXRmY2FmIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTUxOTcxNywiZXhwIjoyMDc1MDk1NzE3fQ.XmFbtcOoP79Y1GVx8ov-Pl0pmJQCcQvqSZidZNsOU0w"
 };
 const envOptions = {
   prefix: "NITRO_",
@@ -4467,13 +4473,6 @@ const assets = {
     "size": 15406,
     "path": "../public/favicon.ico"
   },
-  "/logo.png": {
-    "type": "image/png",
-    "etag": "\"9d03-Yfph3lNXzhewfscIbo246CHTd4w\"",
-    "mtime": "2025-12-24T18:10:29.537Z",
-    "size": 40195,
-    "path": "../public/logo.png"
-  },
   "/manifest.json": {
     "type": "application/json",
     "etag": "\"2ee-455gmmElsmUZOfE5tg620vbEr78\"",
@@ -4481,12 +4480,12 @@ const assets = {
     "size": 750,
     "path": "../public/manifest.json"
   },
-  "/logos/.gitkeep": {
-    "type": "text/plain; charset=utf-8",
-    "etag": "\"c4-1O+vNIsA8YpeWS5AQ5Tzcc4NKgE\"",
-    "mtime": "2026-01-17T18:08:52.444Z",
-    "size": 196,
-    "path": "../public/logos/.gitkeep"
+  "/logo.png": {
+    "type": "image/png",
+    "etag": "\"9d03-Yfph3lNXzhewfscIbo246CHTd4w\"",
+    "mtime": "2025-12-24T18:10:29.537Z",
+    "size": 40195,
+    "path": "../public/logo.png"
   },
   "/robots.txt": {
     "type": "text/plain; charset=utf-8",
@@ -4495,19 +4494,19 @@ const assets = {
     "size": 157,
     "path": "../public/robots.txt"
   },
+  "/logos/.gitkeep": {
+    "type": "text/plain; charset=utf-8",
+    "etag": "\"c4-1O+vNIsA8YpeWS5AQ5Tzcc4NKgE\"",
+    "mtime": "2026-01-17T18:08:52.444Z",
+    "size": 196,
+    "path": "../public/logos/.gitkeep"
+  },
   "/sitemap.xml": {
     "type": "application/xml",
     "etag": "\"1dd-bne7482Op8PPOrlrTJXRc8nuRbk\"",
     "mtime": "2026-01-17T19:03:25.227Z",
     "size": 477,
     "path": "../public/sitemap.xml"
-  },
-  "/logos/logo.jpeg": {
-    "type": "image/jpeg",
-    "etag": "\"1eb4a-PQFkpsrIA74Zh53JNiFY12EIods\"",
-    "mtime": "2026-01-17T18:12:57.090Z",
-    "size": 125770,
-    "path": "../public/logos/logo.jpeg"
   },
   "/logos/logo (3).png": {
     "type": "image/png",
@@ -4516,96 +4515,103 @@ const assets = {
     "size": 52666,
     "path": "../public/logos/logo (3).png"
   },
-  "/_nuxt/BON-vwnU.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"22ae-OQaa9aXi7rx1CYaJtFKkCjyeKj0\"",
-    "mtime": "2026-01-19T14:49:48.727Z",
-    "size": 8878,
-    "path": "../public/_nuxt/BON-vwnU.js"
-  },
-  "/_nuxt/DH1UTOMn.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"148-q6/EG8QFRkUzhDcegBnAJiAVu1c\"",
-    "mtime": "2026-01-19T14:49:48.727Z",
-    "size": 328,
-    "path": "../public/_nuxt/DH1UTOMn.js"
-  },
-  "/_nuxt/Diy9a8-Z.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"dab-IOCeJmeb48+k3SLecHhtRDmh8pw\"",
-    "mtime": "2026-01-19T14:49:48.727Z",
-    "size": 3499,
-    "path": "../public/_nuxt/Diy9a8-Z.js"
-  },
-  "/_nuxt/CYAeNd3O.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"d5-VHsn7Fv9636iGwtswz3Hn/VJAS4\"",
-    "mtime": "2026-01-19T14:49:48.727Z",
-    "size": 213,
-    "path": "../public/_nuxt/CYAeNd3O.js"
-  },
-  "/_nuxt/entry.-t-e3BCr.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"5c2a-GeciYLqBHQwr5mXdv8z4oUVi0bM\"",
-    "mtime": "2026-01-19T14:49:48.727Z",
-    "size": 23594,
-    "path": "../public/_nuxt/entry.-t-e3BCr.css"
-  },
-  "/_nuxt/error-404.2GhCpCfF.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"97e-rj7LYDldeiZzQ/rAgQHuKm4R4CM\"",
-    "mtime": "2026-01-19T14:49:48.727Z",
-    "size": 2430,
-    "path": "../public/_nuxt/error-404.2GhCpCfF.css"
-  },
-  "/_nuxt/error-500.DqdIhFrl.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"773-5c6J9Uy3GU9ENVOfwDGwZL5dQKk\"",
-    "mtime": "2026-01-19T14:49:48.727Z",
-    "size": 1907,
-    "path": "../public/_nuxt/error-500.DqdIhFrl.css"
-  },
-  "/_nuxt/B1CXRXf9.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"3435a-JPNOt+5n7i6zjNS9shihe5sCDe4\"",
-    "mtime": "2026-01-19T14:49:48.727Z",
-    "size": 213850,
-    "path": "../public/_nuxt/B1CXRXf9.js"
-  },
-  "/_nuxt/builds/latest.json": {
-    "type": "application/json",
-    "etag": "\"47-9DhuxCPV1zcqdEuz0zL2jxG++f4\"",
-    "mtime": "2026-01-19T14:49:50.503Z",
-    "size": 71,
-    "path": "../public/_nuxt/builds/latest.json"
-  },
-  "/_nuxt/index.DDgZa7JX.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"d98-8V+ldl5mo0lmiOHoMVTODn9YbsY\"",
-    "mtime": "2026-01-19T14:49:48.721Z",
-    "size": 3480,
-    "path": "../public/_nuxt/index.DDgZa7JX.css"
-  },
-  "/_nuxt/builds/meta/fedfe9a7-3a7a-404f-8afb-295a63310503.json": {
-    "type": "application/json",
-    "etag": "\"8b-C2lHGRk1K8a8Jvwux4k1+lsViKA\"",
-    "mtime": "2026-01-19T14:49:50.504Z",
-    "size": 139,
-    "path": "../public/_nuxt/builds/meta/fedfe9a7-3a7a-404f-8afb-295a63310503.json"
-  },
-  "/_nuxt/U2GGu-8S.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"29755-YTZUhCt7kNR1LdaK9eZNJIZh2FE\"",
-    "mtime": "2026-01-19T14:49:48.727Z",
-    "size": 169813,
-    "path": "../public/_nuxt/U2GGu-8S.js"
-  },
   "/logos/README.md": {
     "type": "text/markdown; charset=utf-8",
     "etag": "\"4fc-YjWJYh6iFlGeU3pDPViG1o14K/w\"",
     "mtime": "2026-01-17T18:08:59.639Z",
     "size": 1276,
     "path": "../public/logos/README.md"
+  },
+  "/_nuxt/BEUqqSU6.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"d5-RSXFjQyB8BBjBjKSuLesfhqdgvI\"",
+    "mtime": "2026-02-24T01:54:43.753Z",
+    "size": 213,
+    "path": "../public/_nuxt/BEUqqSU6.js"
+  },
+  "/_nuxt/De4IV0Yt.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"dab-ZlNZj8ExP/5QxIa5IH3v3DOBN74\"",
+    "mtime": "2026-02-24T01:54:43.753Z",
+    "size": 3499,
+    "path": "../public/_nuxt/De4IV0Yt.js"
+  },
+  "/logos/logo.jpeg": {
+    "type": "image/jpeg",
+    "etag": "\"1eb4a-PQFkpsrIA74Zh53JNiFY12EIods\"",
+    "mtime": "2026-01-17T18:12:57.090Z",
+    "size": 125770,
+    "path": "../public/logos/logo.jpeg"
+  },
+  "/_nuxt/DCS9ukyI.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"22ae-aXta0CvJ7N2gKR7Azon48slp0vg\"",
+    "mtime": "2026-02-24T01:54:43.753Z",
+    "size": 8878,
+    "path": "../public/_nuxt/DCS9ukyI.js"
+  },
+  "/_nuxt/error-404.2GhCpCfF.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"97e-rj7LYDldeiZzQ/rAgQHuKm4R4CM\"",
+    "mtime": "2026-02-24T01:54:43.753Z",
+    "size": 2430,
+    "path": "../public/_nuxt/error-404.2GhCpCfF.css"
+  },
+  "/_nuxt/entry.DDdU31vK.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"9bb7-Wyr/d77YfzjSxRNxUCH0OiKRuAE\"",
+    "mtime": "2026-02-24T01:54:43.753Z",
+    "size": 39863,
+    "path": "../public/_nuxt/entry.DDdU31vK.css"
+  },
+  "/_nuxt/error-500.DqdIhFrl.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"773-5c6J9Uy3GU9ENVOfwDGwZL5dQKk\"",
+    "mtime": "2026-02-24T01:54:43.747Z",
+    "size": 1907,
+    "path": "../public/_nuxt/error-500.DqdIhFrl.css"
+  },
+  "/_nuxt/builds/latest.json": {
+    "type": "application/json",
+    "etag": "\"47-+UkmS73Qf0VzXcza0blvYMSjkJg\"",
+    "mtime": "2026-02-24T01:54:45.326Z",
+    "size": 71,
+    "path": "../public/_nuxt/builds/latest.json"
+  },
+  "/_nuxt/Dmactsri.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"149-thkLvt5JYd5PnNrvea3BRQitl18\"",
+    "mtime": "2026-02-24T01:54:43.753Z",
+    "size": 329,
+    "path": "../public/_nuxt/Dmactsri.js"
+  },
+  "/_nuxt/index.Bpq1KNVF.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"ab0-UYoiJfpIRpGp+qViZm9i/3sLh8U\"",
+    "mtime": "2026-02-24T01:54:43.753Z",
+    "size": 2736,
+    "path": "../public/_nuxt/index.Bpq1KNVF.css"
+  },
+  "/_nuxt/builds/meta/4d5099c2-f51a-48f2-ae7b-19a04d90df09.json": {
+    "type": "application/json",
+    "etag": "\"8b-i7xkaQeUuDqkdacNjBHkvmgUjvo\"",
+    "mtime": "2026-02-24T01:54:45.326Z",
+    "size": 139,
+    "path": "../public/_nuxt/builds/meta/4d5099c2-f51a-48f2-ae7b-19a04d90df09.json"
+  },
+  "/_nuxt/C_IM34nP.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"29adb-GSe3NuzzyHmGOX3XE9FoonIxn8o\"",
+    "mtime": "2026-02-24T01:54:43.753Z",
+    "size": 170715,
+    "path": "../public/_nuxt/C_IM34nP.js"
+  },
+  "/_nuxt/DOIZqUVT.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"38c12-oIXqEAMz+8uBogvQVppzjTXoOwU\"",
+    "mtime": "2026-02-24T01:54:43.753Z",
+    "size": 232466,
+    "path": "../public/_nuxt/DOIZqUVT.js"
   },
   "/Gemini_Generated_Image_w1gxe3w1gxe3w1gx.png": {
     "type": "image/png",
@@ -4742,7 +4748,7 @@ function getAsset (id) {
 
 const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 const EncodingMap = { gzip: ".gz", br: ".br" };
-const _LF795S = eventHandler((event) => {
+const _GVePnW = eventHandler((event) => {
   if (event.method && !METHODS.has(event.method)) {
     return;
   }
@@ -4806,7 +4812,7 @@ const _LF795S = eventHandler((event) => {
   return readAsset(id);
 });
 
-const _T3aV1v = defineEventHandler((event) => {
+const _mwXs5i = defineEventHandler((event) => {
   const host = getRequestHeader(event, "host") || "";
   const path = event.path || "";
   const mainDomain = "oohhfood.com.br";
@@ -4819,7 +4825,7 @@ const _T3aV1v = defineEventHandler((event) => {
   return;
 });
 
-const _ZJ2mkM = defineEventHandler((event) => {
+const _PrT63M = defineEventHandler((event) => {
   const host = getRequestHeader(event, "host") || "";
   const mainDomain = "oohhfood.com.br";
   if (!host || host === mainDomain) {
@@ -4839,15 +4845,17 @@ const _ZJ2mkM = defineEventHandler((event) => {
 
 const _SxA8c9 = defineEventHandler(() => {});
 
-const _lazy_jIDqkV = () => import('../routes/renderer.mjs').then(function (n) { return n.r; });
+const _lazy_mnq7SJ = () => import('../routes/api/client-logos.get.mjs');
+const _lazy_WcqG2Q = () => import('../routes/renderer.mjs').then(function (n) { return n.r; });
 
 const handlers = [
-  { route: '', handler: _LF795S, lazy: false, middleware: true, method: undefined },
-  { route: '', handler: _T3aV1v, lazy: false, middleware: true, method: undefined },
-  { route: '', handler: _ZJ2mkM, lazy: false, middleware: true, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_jIDqkV, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _GVePnW, lazy: false, middleware: true, method: undefined },
+  { route: '', handler: _mwXs5i, lazy: false, middleware: true, method: undefined },
+  { route: '', handler: _PrT63M, lazy: false, middleware: true, method: undefined },
+  { route: '/api/client-logos', handler: _lazy_mnq7SJ, lazy: true, middleware: false, method: "get" },
+  { route: '/__nuxt_error', handler: _lazy_WcqG2Q, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_jIDqkV, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_WcqG2Q, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -5276,5 +5284,5 @@ function setupGracefulShutdown(listener, nitroApp) {
   });
 }
 
-export { $fetch as $, withTrailingSlash as A, withoutTrailingSlash as B, trapUnhandledNodeErrors as a, useNitroApp as b, getResponseStatus as c, destr as d, defineRenderHandler as e, getQuery as f, getResponseStatusText as g, createError$1 as h, getRouteRules as i, joinRelativeURL as j, hasProtocol as k, isScriptProtocol as l, joinURL as m, sanitizeStatusCode as n, getContext as o, createHooks as p, executeAsync as q, toRouteMatcher as r, setupGracefulShutdown as s, toNodeListener as t, useRuntimeConfig as u, createRouter$1 as v, withQuery as w, defu as x, getRequestHeader as y, parseQuery as z };
+export { $fetch as $, hash$1 as A, parseQuery as B, withTrailingSlash as C, withoutTrailingSlash as D, trapUnhandledNodeErrors as a, useNitroApp as b, defineEventHandler as c, destr as d, getResponseStatus as e, defineRenderHandler as f, getResponseStatusText as g, getQuery as h, createError$1 as i, joinRelativeURL as j, getRouteRules as k, hasProtocol as l, isScriptProtocol as m, joinURL as n, sanitizeStatusCode as o, getContext as p, createHooks as q, executeAsync as r, setupGracefulShutdown as s, toNodeListener as t, useRuntimeConfig as u, toRouteMatcher as v, withQuery as w, createRouter$1 as x, defu as y, getRequestHeader as z };
 //# sourceMappingURL=nitro.mjs.map

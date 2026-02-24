@@ -1,0 +1,1 @@
+import{_ as s,x as t,y as c,a7 as r}from"./C_IM34nP.js";const a={},n={class:"min-h-screen bg-cream"};function o(e,_){return c(),t("div",n,[r(e.$slots,"default")])}const d=s(a,[["render",o]]);export{d as default};

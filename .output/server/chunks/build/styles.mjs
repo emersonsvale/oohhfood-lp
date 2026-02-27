@@ -1,11 +1,9 @@
 const interopDefault = r => r.default || r || [];
 const styles = {
-  "node_modules/nuxt/dist/app/components/error-500.vue": () => import('./error-500-styles.QDkOw_Qw.mjs').then(interopDefault),
-  "node_modules/nuxt/dist/app/components/error-404.vue": () => import('./error-404-styles.BmqVDDWE.mjs').then(interopDefault),
-  "node_modules/nuxt/dist/app/components/error-500.vue?vue&type=style&index=0&scoped=c415ba6a&lang.css": () => import('./error-500-styles.QDkOw_Qw.mjs').then(interopDefault),
-  "node_modules/nuxt/dist/app/components/error-404.vue?vue&type=style&index=0&scoped=8c88d9ea&lang.css": () => import('./error-404-styles.BmqVDDWE.mjs').then(interopDefault),
-  "components/HeroSection.vue": () => import('./HeroSection-styles.CxmEpvYp.mjs').then(interopDefault),
-  "components/HeroSection.vue?vue&type=style&index=0&scoped=10936d5f&lang.css": () => import('./HeroSection-styles.CxmEpvYp.mjs').then(interopDefault),
+  "components/HeroSection.vue": () => import('./HeroSection-styles.DISu6xTi.mjs').then(interopDefault),
+  "components/FAQSection.vue": () => import('./FAQSection-styles.BRrII6fV.mjs').then(interopDefault),
+  "components/HeroSection.vue?vue&type=style&index=0&scoped=e20555ea&lang.css": () => import('./HeroSection-styles.DISu6xTi.mjs').then(interopDefault),
+  "components/FAQSection.vue?vue&type=style&index=0&scoped=cf0ed80a&lang.css": () => import('./FAQSection-styles.BRrII6fV.mjs').then(interopDefault),
   "components/ClientLogos.vue": () => import('./ClientLogos-styles.BZz1kPdh.mjs').then(interopDefault),
   "components/ClientLogos.vue?vue&type=style&index=0&scoped=92280280&lang.css": () => import('./ClientLogos-styles.BZz1kPdh.mjs').then(interopDefault)
 };

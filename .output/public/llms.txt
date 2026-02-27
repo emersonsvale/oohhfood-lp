@@ -1,0 +1,110 @@
+# OohhFood
+
+> Sistema completo de gestão para restaurantes, lanchonetes e delivery.
+
+## Sobre o OohhFood
+
+O OohhFood é uma plataforma SaaS brasileira de gestão para o setor de food service, desenvolvida pela Vale Soluções Digitais LTDA (CNPJ: 61.712.285/0001-88). O sistema oferece uma solução completa e integrada que abrange desde o ponto de venda (PDV) até a gestão completa do estabelecimento, tudo acessível via navegador web, sem necessidade de instalação.
+
+## Público-alvo
+
+- Restaurantes de todos os portes
+- Lanchonetes e hamburguerias
+- Pizzarias e cafeterias
+- Padarias e docerias
+- Bares e food trucks
+- Açaiterias e estabelecimentos de food service em geral
+
+## Principais Funcionalidades
+
+### PDV Completo
+Sistema de ponto de venda intuitivo com carrinho, busca de produtos, descontos e rascunhos de pedidos.
+
+### Cardápio Digital Online
+Loja pública online estilo iFood com carrinho, checkout e múltiplos métodos de pagamento. Permite pedidos 24 horas por dia.
+
+### QR Code nas Mesas
+Clientes fazem pedidos diretamente da mesa escaneando um QR Code com o celular. Sem necessidade de garçom para anotar pedidos. Aumenta o ticket médio em até 35%.
+
+### Gestão de Mesas
+Controle completo de ocupação, status, atribuição de garçom e histórico de pedidos por mesa.
+
+### CRM e Fidelização
+Cadastro de clientes, histórico de compras, análise de comportamento, cashback automatizado e integração com WhatsApp.
+
+### Campanhas e Cupons
+Sistema promocional completo com cupons de desconto e promoções automáticas para atrair e reter clientes.
+
+### Fluxo da Cozinha (KDS)
+Kitchen Display System para visualização de pedidos pendentes, mudança de status e priorização de pedidos na cozinha.
+
+### Dashboard com Métricas
+Receita do mês, comparações, produtos mais vendidos, mesas ativas, funcionários online e métricas em tempo real para decisões baseadas em dados.
+
+### Gestão Completa
+Produtos, categorias, sabores, adicionais, funcionários, horários, estoque e muito mais.
+
+### Frente de Caixa
+Controle financeiro completo com abertura e fechamento de caixa.
+
+### App para Garçom
+Comanda digital completa para garçons no celular ou tablet.
+
+### Cadastro de Entregadores
+Gestão de entregadores para operações de delivery.
+
+## Planos e Preços
+
+### Oohh Food Básico — R$ 97,90/mês
+- Cardápio Digital
+- Pedidos em Balcão (PDV)
+- Cupons
+- Cashback e Fidelização automatizada
+
+### Oohh Food Profissional — R$ 297,90/mês
+- Tudo do plano Básico +
+- QR Code para mesas
+- Aplicativo para Garçom com Comanda Digital
+- Recuperador de Vendas
+- Cadastro de Entregadores
+- Frente de Caixa
+- Display para pedidos de cozinha (KDS)
+- Gestor de Estoque
+
+Todos os planos incluem 30 dias de teste grátis, sem necessidade de cartão de crédito.
+
+## Resultados Comprovados
+
+- +35% de aumento médio no ticket dos restaurantes
+- -50% de redução no tempo de atendimento
+- +1.000 restaurantes já utilizam a plataforma
+
+## Perguntas Frequentes
+
+**O que é o OohhFood e como ele funciona?**
+O OohhFood é um sistema completo de gestão para restaurantes, lanchonetes e delivery. Reúne PDV, cardápio digital, QR Code nas mesas, gestão de mesas, CRM, fidelização, cupons, KDS, dashboard e muito mais em uma única plataforma web.
+
+**Quanto custa o OohhFood?**
+Planos a partir de R$ 97,90/mês com 30 dias de teste grátis, sem cartão de crédito.
+
+**Preciso instalar algum aplicativo?**
+Não. O OohhFood funciona 100% na nuvem pelo navegador.
+
+**Para quais tipos de estabelecimentos o OohhFood serve?**
+Restaurantes, lanchonetes, hamburguerias, pizzarias, cafeterias, padarias, bares, food trucks, docerias, açaiterias e qualquer estabelecimento de food service.
+
+**Posso cancelar a qualquer momento?**
+Sim, sem multa ou fidelidade contratual.
+
+## Links
+
+- Site: https://oohhfood.com.br
+- Aplicação: https://app.oohhfood.com.br
+- Cadastro: https://app.oohhfood.com.br/signup
+- Login: https://app.oohhfood.com.br/login
+
+## Contato
+
+- Empresa: Vale Soluções Digitais LTDA
+- CNPJ: 61.712.285/0001-88
+- Site: https://oohhfood.com.br

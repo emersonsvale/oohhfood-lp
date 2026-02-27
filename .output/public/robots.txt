@@ -4,5 +4,30 @@ Allow: /
 # Sitemap
 Sitemap: https://oohhfood.com.br/sitemap.xml
 
-# Crawl-delay (opcional, ajuste conforme necessário)
-Crawl-delay: 1
+# Allow AI crawlers for GEO (Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# LLMs.txt
+# https://oohhfood.com.br/llms.txt

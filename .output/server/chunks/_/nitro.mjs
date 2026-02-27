@@ -4022,7 +4022,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "4d2299c1-28e6-4c09-a894-be8bc3860329",
+    "buildId": "33cd570d-3076-48f4-82c2-f21b4776222d",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4466,6 +4466,13 @@ const plugins = [
 ];
 
 const assets = {
+  "/llms.txt": {
+    "type": "text/plain; charset=utf-8",
+    "etag": "\"1067-KHIL0bY1rYpForG/JkanRvH2U44\"",
+    "mtime": "2026-02-27T00:06:26.026Z",
+    "size": 4199,
+    "path": "../public/llms.txt"
+  },
   "/favicon.ico": {
     "type": "image/vnd.microsoft.icon",
     "etag": "\"3c2e-qJ8S536YRWg56kOHnuHtxuKdbqI\"",
@@ -4501,12 +4508,12 @@ const assets = {
     "size": 196,
     "path": "../public/logos/.gitkeep"
   },
-  "/llms.txt": {
-    "type": "text/plain; charset=utf-8",
-    "etag": "\"1067-KHIL0bY1rYpForG/JkanRvH2U44\"",
-    "mtime": "2026-02-27T00:06:26.026Z",
-    "size": 4199,
-    "path": "../public/llms.txt"
+  "/logos/logo (3).png": {
+    "type": "image/png",
+    "etag": "\"cdba-ZM6M1KUkZ2aHYbBMJvtk0xZg4K0\"",
+    "mtime": "2026-01-17T18:12:48.921Z",
+    "size": 52666,
+    "path": "../public/logos/logo (3).png"
   },
   "/sitemap.xml": {
     "type": "application/xml",
@@ -4515,12 +4522,12 @@ const assets = {
     "size": 987,
     "path": "../public/sitemap.xml"
   },
-  "/logos/logo (3).png": {
-    "type": "image/png",
-    "etag": "\"cdba-ZM6M1KUkZ2aHYbBMJvtk0xZg4K0\"",
-    "mtime": "2026-01-17T18:12:48.921Z",
-    "size": 52666,
-    "path": "../public/logos/logo (3).png"
+  "/logos/logo.jpeg": {
+    "type": "image/jpeg",
+    "etag": "\"1eb4a-PQFkpsrIA74Zh53JNiFY12EIods\"",
+    "mtime": "2026-01-17T18:12:57.090Z",
+    "size": 125770,
+    "path": "../public/logos/logo.jpeg"
   },
   "/logos/README.md": {
     "type": "text/markdown; charset=utf-8",
@@ -4532,65 +4539,51 @@ const assets = {
   "/_nuxt/BwkNq3E4.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"cf-A3OmBHLu4bdbCfRx5rGyR1qmkwc\"",
-    "mtime": "2026-02-27T00:21:38.010Z",
+    "mtime": "2026-02-27T00:32:54.170Z",
     "size": 207,
     "path": "../public/_nuxt/BwkNq3E4.js"
   },
-  "/logos/logo.jpeg": {
-    "type": "image/jpeg",
-    "etag": "\"1eb4a-PQFkpsrIA74Zh53JNiFY12EIods\"",
-    "mtime": "2026-01-17T18:12:57.090Z",
-    "size": 125770,
-    "path": "../public/logos/logo.jpeg"
+  "/_nuxt/entry.miEKPELK.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"a07a-zBvI3Gkl5Hn4TOQSouDW8H40x3I\"",
+    "mtime": "2026-02-27T00:32:54.169Z",
+    "size": 41082,
+    "path": "../public/_nuxt/entry.miEKPELK.css"
   },
   "/_nuxt/index.CnSwj-jD.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"c29-4Z7PIjQRhPCItUpYZ/fg95vOsfA\"",
-    "mtime": "2026-02-27T00:21:38.010Z",
+    "mtime": "2026-02-27T00:32:54.170Z",
     "size": 3113,
     "path": "../public/_nuxt/index.CnSwj-jD.css"
   },
   "/_nuxt/builds/latest.json": {
     "type": "application/json",
-    "etag": "\"47-HoCPWpAX8TbY9e/MH+LlXJiIfXY\"",
-    "mtime": "2026-02-27T00:21:39.990Z",
+    "etag": "\"47-1S/pujogKwFQOJHY+vchHWd6aQQ\"",
+    "mtime": "2026-02-27T00:32:56.265Z",
     "size": 71,
     "path": "../public/_nuxt/builds/latest.json"
   },
-  "/_nuxt/entry.miEKPELK.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"a07a-zBvI3Gkl5Hn4TOQSouDW8H40x3I\"",
-    "mtime": "2026-02-27T00:21:38.008Z",
-    "size": 41082,
-    "path": "../public/_nuxt/entry.miEKPELK.css"
-  },
-  "/_nuxt/builds/meta/4d2299c1-28e6-4c09-a894-be8bc3860329.json": {
+  "/_nuxt/builds/meta/33cd570d-3076-48f4-82c2-f21b4776222d.json": {
     "type": "application/json",
-    "etag": "\"8b-A/1g0ioZwWZ1agwuVtOIZl8ezJk\"",
-    "mtime": "2026-02-27T00:21:39.991Z",
+    "etag": "\"8b-N0wSk2wostDNM1O3HJfDdDtUjsI\"",
+    "mtime": "2026-02-27T00:32:56.265Z",
     "size": 139,
-    "path": "../public/_nuxt/builds/meta/4d2299c1-28e6-4c09-a894-be8bc3860329.json"
+    "path": "../public/_nuxt/builds/meta/33cd570d-3076-48f4-82c2-f21b4776222d.json"
   },
   "/_nuxt/CHrSOdtk.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"2b85e-OBfqVs/iF1zlxpkPzkOSpb/kcNo\"",
-    "mtime": "2026-02-27T00:21:38.010Z",
+    "mtime": "2026-02-27T00:32:54.170Z",
     "size": 178270,
     "path": "../public/_nuxt/CHrSOdtk.js"
   },
   "/_nuxt/ClwT9txY.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"3b771-i39DYrza23mMz/3scePJXtWIJ94\"",
-    "mtime": "2026-02-27T00:21:38.010Z",
+    "mtime": "2026-02-27T00:32:54.170Z",
     "size": 243569,
     "path": "../public/_nuxt/ClwT9txY.js"
-  },
-  "/sistema-gestao-restaurante-oohhfood.png": {
-    "type": "image/png",
-    "etag": "\"873dfe-8unzVAIy+Llvt4D+IJN2T1zaW40\"",
-    "mtime": "2026-02-27T00:06:26.101Z",
-    "size": 8863230,
-    "path": "../public/sistema-gestao-restaurante-oohhfood.png"
   },
   "/Gemini_Generated_Image_w1gxe3w1gxe3w1gx.png": {
     "type": "image/png",
@@ -4598,6 +4591,13 @@ const assets = {
     "mtime": "2026-01-17T18:02:15.054Z",
     "size": 8863230,
     "path": "../public/Gemini_Generated_Image_w1gxe3w1gxe3w1gx.png"
+  },
+  "/sistema-gestao-restaurante-oohhfood.png": {
+    "type": "image/png",
+    "etag": "\"873dfe-8unzVAIy+Llvt4D+IJN2T1zaW40\"",
+    "mtime": "2026-02-27T00:06:26.101Z",
+    "size": 8863230,
+    "path": "../public/sistema-gestao-restaurante-oohhfood.png"
   }
 };
 
@@ -4806,17 +4806,25 @@ const _mwXs5i = defineEventHandler((event) => {
 
 const _PrT63M = defineEventHandler((event) => {
   const host = getRequestHeader(event, "host") || "";
+  const hostWithoutPort = host.split(":")[0];
   const mainDomain = "oohhfood.com.br";
-  if (!host || host === mainDomain) {
-    if (host.includes("localhost")) {
-      const parts = host.split(".");
-      if (parts.length >= 2 && parts[0] !== "localhost" && parts[0] !== "app" && parts[0] !== "www") {
-        event.context.tenant = parts[0];
-      }
+  if (!hostWithoutPort) {
+    return;
+  }
+  if (hostWithoutPort.includes("localhost")) {
+    const parts = hostWithoutPort.split(".");
+    if (parts.length >= 2 && parts[0] !== "localhost" && parts[0] !== "app" && parts[0] !== "www") {
+      event.context.tenant = parts[0];
     }
     return;
   }
-  const subdomain = host.replace(`.${mainDomain}`, "").split(":")[0];
+  if (hostWithoutPort === mainDomain || hostWithoutPort === `www.${mainDomain}`) {
+    return;
+  }
+  if (!hostWithoutPort.endsWith(`.${mainDomain}`)) {
+    return;
+  }
+  const subdomain = hostWithoutPort.replace(`.${mainDomain}`, "");
   if (subdomain && subdomain !== "app" && subdomain !== "www" && subdomain !== "") {
     event.context.tenant = subdomain;
   }
@@ -4825,6 +4833,7 @@ const _PrT63M = defineEventHandler((event) => {
 const _SxA8c9 = defineEventHandler(() => {});
 
 const _lazy_mnq7SJ = () => import('../routes/api/client-logos.get.mjs');
+const _lazy_CC8uxI = () => import('../routes/api/planos.get.mjs');
 const _lazy_WcqG2Q = () => import('../routes/renderer.mjs').then(function (n) { return n.r; });
 
 const handlers = [
@@ -4832,6 +4841,7 @@ const handlers = [
   { route: '', handler: _mwXs5i, lazy: false, middleware: true, method: undefined },
   { route: '', handler: _PrT63M, lazy: false, middleware: true, method: undefined },
   { route: '/api/client-logos', handler: _lazy_mnq7SJ, lazy: true, middleware: false, method: "get" },
+  { route: '/api/planos', handler: _lazy_CC8uxI, lazy: true, middleware: false, method: "get" },
   { route: '/__nuxt_error', handler: _lazy_WcqG2Q, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_WcqG2Q, lazy: true, middleware: false, method: undefined }

@@ -1,16 +1,25 @@
 <template>
-  <section id="features" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Funcionalidades Completas
+  <section id="features" class="py-20 md:py-28 bg-cream relative overflow-hidden" aria-label="Funcionalidades do sistema OohhFood para restaurantes">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-brand-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-warm/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+      <div class="text-center mb-14 md:mb-20">
+        <span class="section-label mb-4 inline-flex">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          Funcionalidades
+        </span>
+        <h2 class="section-title mb-5">
+          Tudo que seu restaurante<br class="hidden md:block" />
+          <span class="text-gradient">precisa em um só lugar</span>
         </h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          Tudo que você precisa para gerenciar seu restaurante de forma eficiente e moderna
+        <p class="section-subtitle">
+          Do primeiro pedido ao fechamento do caixa — cada funcionalidade foi pensada para simplificar sua operação.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
         <FeatureCard
           icon="credit-card"
           title="PDV Completo"

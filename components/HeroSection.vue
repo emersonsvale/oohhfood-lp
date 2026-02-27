@@ -1,7 +1,7 @@
 <template>
-  <section class="relative overflow-hidden bg-dark-900 grain-overlay">
+  <section class="relative overflow-hidden bg-dark-900 grain-overlay" aria-label="O OohhFood é o sistema mais completo para gestão de restaurantes, lanchonetes e delivery no Brasil">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" :class="scrolled ? 'bg-white/90 backdrop-blur-xl shadow-glass border-b border-dark-100' : 'bg-transparent'">
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" :class="scrolled ? 'bg-white/90 backdrop-blur-xl shadow-glass border-b border-dark-100' : 'bg-transparent'" aria-label="Navegação principal do OohhFood">
       <div class="max-w-7xl mx-auto px-5 md:px-8 py-3 md:py-4">
         <div class="flex items-center justify-between">
           <a href="#" class="flex items-center gap-2 md:gap-3 group">
@@ -149,12 +149,13 @@
             <!-- Main Image -->
             <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
               <img 
-                src="/Gemini_Generated_Image_w1gxe3w1gxe3w1gx.png" 
-                alt="Sistema OohhFood - Interface de gestão de restaurante com pedidos, produtos e dashboard" 
+                src="/sistema-gestao-restaurante-oohhfood.png" 
+                alt="Sistema OohhFood - Interface de gestão de restaurante mostrando dashboard de pedidos, produtos, mesas e métricas em tempo real" 
                 class="w-full h-auto"
                 loading="eager"
                 width="800"
                 height="600"
+                fetchpriority="high"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900/40 via-transparent to-transparent"></div>
             </div>
@@ -235,6 +236,7 @@ const navLinks = [
   { href: '#features', text: 'Funcionalidades', label: 'Ver funcionalidades do OohhFood' },
   { href: '#benefits', text: 'Benefícios', label: 'Ver benefícios do OohhFood' },
   { href: '#pricing', text: 'Preços', label: 'Ver planos e preços' },
+  { href: '#faq', text: 'Dúvidas', label: 'Ver perguntas frequentes' },
   { href: 'https://app.oohhfood.com.br/lojas', text: 'Lojas', label: 'Ver lojas cadastradas no OohhFood (abre em nova aba)', external: true },
 ]
 

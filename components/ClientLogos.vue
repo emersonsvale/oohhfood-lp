@@ -84,32 +84,32 @@ const handleImageLoad = (index: number) => {
   position: relative;
 }
 
-/* Efeito de fade nas bordas */
+/* Fade edges (transparent, no background color) */
 .client-logos-container::before,
 .client-logos-container::after {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 100px;
+  width: 80px;
   z-index: 10;
   pointer-events: none;
 }
 
 .client-logos-container::before {
   left: 0;
-  background: linear-gradient(to right, rgba(249, 250, 251, 1), rgba(249, 250, 251, 0));
+  background: linear-gradient(to right, rgba(15, 15, 18, 1), rgba(15, 15, 18, 0));
 }
 
 .client-logos-container::after {
   right: 0;
-  background: linear-gradient(to left, rgba(249, 250, 251, 1), rgba(249, 250, 251, 0));
+  background: linear-gradient(to left, rgba(15, 15, 18, 1), rgba(15, 15, 18, 0));
 }
 
 @media (max-width: 768px) {
   .client-logos-container::before,
   .client-logos-container::after {
-    width: 50px;
+    width: 40px;
   }
 }
 
@@ -122,8 +122,8 @@ const handleImageLoad = (index: number) => {
 .client-logos-track {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  padding: 1rem 0;
+  gap: 2.5rem;
+  padding: 0.75rem 0;
   animation: scroll infinite linear;
   will-change: transform;
   flex-shrink: 0;
@@ -142,69 +142,69 @@ const handleImageLoad = (index: number) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
-  width: 180px;
-  padding: 0.75rem 1.5rem;
+  height: 50px;
+  width: 160px;
+  padding: 0.5rem 1rem;
   flex-shrink: 0;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
 }
 
 .client-logo-image {
   height: 100%;
   width: 100%;
-  max-height: 50px;
-  max-width: 160px;
+  max-height: 40px;
+  max-width: 140px;
   object-fit: contain;
   object-position: center;
-  opacity: 0.6;
-  filter: grayscale(100%);
-  transition: all 0.3s ease;
+  opacity: 0.4;
+  filter: grayscale(100%) brightness(2);
+  transition: all 0.4s ease;
   pointer-events: none;
 }
 
-/* Ajustes responsivos */
+/* Responsive */
 @media (min-width: 768px) {
   .client-logos-track {
-    gap: 3.5rem;
+    gap: 3rem;
   }
   
   .client-logo-item {
-    height: 70px;
-    width: 200px;
+    height: 60px;
+    width: 180px;
   }
   
   .client-logo-image {
-    max-height: 60px;
-    max-width: 180px;
+    max-height: 50px;
+    max-width: 160px;
   }
 }
 
 @media (min-width: 1024px) {
   .client-logos-track {
-    gap: 4rem;
+    gap: 3.5rem;
   }
   
   .client-logo-item {
-    height: 80px;
-    width: 220px;
+    height: 65px;
+    width: 200px;
   }
   
   .client-logo-image {
-    max-height: 70px;
-    max-width: 200px;
+    max-height: 55px;
+    max-width: 180px;
   }
 }
 
-/* Pausar animação no hover */
+/* Pause on hover */
 .client-logos-container:hover .client-logos-track {
   animation-play-state: paused;
 }
 
 .client-logos-container:hover .client-logo-image {
-  opacity: 1;
-  filter: grayscale(0%);
+  opacity: 0.8;
+  filter: grayscale(0%) brightness(1);
   pointer-events: auto;
 }
 </style>

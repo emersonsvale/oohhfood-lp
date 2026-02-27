@@ -5,25 +5,30 @@
     
     <!-- Hero Section -->
     <HeroSection />
-    
-    <!-- Features Section -->
-    <FeaturesSection />
-    
-    <!-- Benefits Section -->
-    <BenefitsSection />
-    
-    <!-- How It Works Section -->
-    <HowItWorksSection />
-    
-    <!-- Pricing Section -->
-    <PricingSection />
-    
-    <!-- Testimonials Section -->
-    <TestimonialsSection />
-    
-    <!-- CTA Section -->
-    <CTASection />
-    
+
+    <main id="main-content">
+      <!-- Features Section -->
+      <FeaturesSection />
+      
+      <!-- Benefits Section -->
+      <BenefitsSection />
+      
+      <!-- How It Works Section -->
+      <HowItWorksSection />
+      
+      <!-- Pricing Section -->
+      <PricingSection />
+      
+      <!-- Testimonials Section -->
+      <TestimonialsSection />
+      
+      <!-- FAQ Section -->
+      <FAQSection />
+
+      <!-- CTA Section -->
+      <CTASection />
+    </main>
+
     <!-- Footer -->
     <AppFooter />
   </div>

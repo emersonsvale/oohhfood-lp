@@ -28,6 +28,7 @@ export const useTenant = () => {
   }
 
   const host = getHost()
+  const hostWithoutPort = host.split(':')[0]
   
   const tenant = computed(() => {
     // Prioriza o tenant do contexto do servidor (middleware)
@@ -38,8 +39,8 @@ export const useTenant = () => {
     if (!host) return null
 
     // Em desenvolvimento com localhost
-    if (host.includes('localhost')) {
-      const parts = host.split('.')
+    if (hostWithoutPort.includes('localhost')) {
+      const parts = hostWithoutPort.split('.')
       if (parts.length >= 2 && parts[0] !== 'localhost' && parts[0] !== 'app' && parts[0] !== 'www') {
         return parts[0]
       }
@@ -47,9 +48,13 @@ export const useTenant = () => {
     }
 
     // Em produção, extrai do host
-    if (host.includes(mainDomain)) {
-      const subdomain = host.replace(`.${mainDomain}`, '').split(':')[0]
-      if (subdomain && subdomain !== 'app' && subdomain !== 'www' && subdomain !== '') {
+    if (hostWithoutPort === mainDomain || hostWithoutPort === `www.${mainDomain}`) {
+      return null
+    }
+
+    if (hostWithoutPort.endsWith(`.${mainDomain}`)) {
+      const subdomain = hostWithoutPort.replace(`.${mainDomain}`, '')
+      if (subdomain && subdomain !== 'app' && subdomain !== 'www') {
         return subdomain
       }
     }
@@ -61,8 +66,8 @@ export const useTenant = () => {
     tenant,
     // Helper para verificar se é o painel administrativo
     isApp: computed(() => {
-      if (!host) return false
-      return host.includes('app.') || host.startsWith('app.')
+      if (!hostWithoutPort) return false
+      return hostWithoutPort === `app.${mainDomain}` || hostWithoutPort.startsWith('app.')
     })
   }
 }

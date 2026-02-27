@@ -20,7 +20,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'pt-BR'
       },
-      title: 'OohhFood - Sistema Completo para Restaurantes | PDV, Cardápio Digital e Gestão',
+      title: 'OohhFood',
       titleTemplate: '%s',
       meta: [
         { charset: 'utf-8' },

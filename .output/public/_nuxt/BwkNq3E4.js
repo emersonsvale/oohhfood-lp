@@ -1,0 +1,1 @@
+import{_ as s,c,o as t,Q as o}from"./CHrSOdtk.js";const r={},n={class:"min-h-screen bg-cream"};function a(e,_){return t(),c("div",n,[o(e.$slots,"default")])}const d=s(r,[["render",a]]);export{d as default};

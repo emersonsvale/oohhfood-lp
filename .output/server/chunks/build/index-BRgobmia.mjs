@@ -1480,21 +1480,25 @@ const useTenant = () => {
     return "";
   };
   const host = getHost();
+  const hostWithoutPort = host.split(":")[0];
   const tenant = computed(() => {
     if (serverTenant) {
       return serverTenant;
     }
     if (!host) return null;
-    if (host.includes("localhost")) {
-      const parts = host.split(".");
+    if (hostWithoutPort.includes("localhost")) {
+      const parts = hostWithoutPort.split(".");
       if (parts.length >= 2 && parts[0] !== "localhost" && parts[0] !== "app" && parts[0] !== "www") {
         return parts[0];
       }
       return null;
     }
-    if (host.includes(mainDomain)) {
-      const subdomain = host.replace(`.${mainDomain}`, "").split(":")[0];
-      if (subdomain && subdomain !== "app" && subdomain !== "www" && subdomain !== "") {
+    if (hostWithoutPort === mainDomain || hostWithoutPort === `www.${mainDomain}`) {
+      return null;
+    }
+    if (hostWithoutPort.endsWith(`.${mainDomain}`)) {
+      const subdomain = hostWithoutPort.replace(`.${mainDomain}`, "");
+      if (subdomain && subdomain !== "app" && subdomain !== "www") {
         return subdomain;
       }
     }
@@ -1504,8 +1508,8 @@ const useTenant = () => {
     tenant,
     // Helper para verificar se é o painel administrativo
     isApp: computed(() => {
-      if (!host) return false;
-      return host.includes("app.") || host.startsWith("app.");
+      if (!hostWithoutPort) return false;
+      return hostWithoutPort === `app.${mainDomain}` || hostWithoutPort.startsWith("app.");
     })
   };
 };
@@ -1568,7 +1572,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     if (isApp.value) ;
     if (!loja.value) {
       useHead({
-        title: tenant.value ? `${tenant.value} - OohhFood` : "OohhFood - Sistema Completo para Restaurantes",
+        title: tenant.value ? `${tenant.value} - OohhFood` : "OohhFood",
         meta: [
           {
             name: "description",
@@ -1623,4 +1627,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=index-Bol5zzwW.mjs.map
+//# sourceMappingURL=index-BRgobmia.mjs.map

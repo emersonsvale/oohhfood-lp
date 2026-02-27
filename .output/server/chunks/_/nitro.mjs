@@ -4022,7 +4022,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "710ba479-d2c5-4479-862b-7aaafa80c00c",
+    "buildId": "4d2299c1-28e6-4c09-a894-be8bc3860329",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4473,12 +4473,12 @@ const assets = {
     "size": 15406,
     "path": "../public/favicon.ico"
   },
-  "/llms.txt": {
+  "/robots.txt": {
     "type": "text/plain; charset=utf-8",
-    "etag": "\"1067-KHIL0bY1rYpForG/JkanRvH2U44\"",
-    "mtime": "2026-02-27T00:06:26.026Z",
-    "size": 4199,
-    "path": "../public/llms.txt"
+    "etag": "\"1ec-d/0qyxv3ReVFAfH7NyG7hmroUAs\"",
+    "mtime": "2026-02-27T00:13:22.786Z",
+    "size": 492,
+    "path": "../public/robots.txt"
   },
   "/logo.png": {
     "type": "image/png",
@@ -4487,17 +4487,31 @@ const assets = {
     "size": 40195,
     "path": "../public/logo.png"
   },
-  "/robots.txt": {
+  "/manifest.json": {
+    "type": "application/json",
+    "etag": "\"2ee-455gmmElsmUZOfE5tg620vbEr78\"",
+    "mtime": "2026-01-17T19:04:20.097Z",
+    "size": 750,
+    "path": "../public/manifest.json"
+  },
+  "/logos/.gitkeep": {
     "type": "text/plain; charset=utf-8",
-    "etag": "\"1ec-d/0qyxv3ReVFAfH7NyG7hmroUAs\"",
-    "mtime": "2026-02-27T00:06:26.027Z",
-    "size": 492,
-    "path": "../public/robots.txt"
+    "etag": "\"c4-1O+vNIsA8YpeWS5AQ5Tzcc4NKgE\"",
+    "mtime": "2026-01-17T18:08:52.444Z",
+    "size": 196,
+    "path": "../public/logos/.gitkeep"
+  },
+  "/llms.txt": {
+    "type": "text/plain; charset=utf-8",
+    "etag": "\"1067-KHIL0bY1rYpForG/JkanRvH2U44\"",
+    "mtime": "2026-02-27T00:06:26.026Z",
+    "size": 4199,
+    "path": "../public/llms.txt"
   },
   "/sitemap.xml": {
     "type": "application/xml",
     "etag": "\"3db-pDDGkStSGR/EHX//7IfL38/g/4E\"",
-    "mtime": "2026-02-27T00:06:26.104Z",
+    "mtime": "2026-02-27T00:13:22.786Z",
     "size": 987,
     "path": "../public/sitemap.xml"
   },
@@ -4508,33 +4522,19 @@ const assets = {
     "size": 52666,
     "path": "../public/logos/logo (3).png"
   },
-  "/logos/.gitkeep": {
-    "type": "text/plain; charset=utf-8",
-    "etag": "\"c4-1O+vNIsA8YpeWS5AQ5Tzcc4NKgE\"",
-    "mtime": "2026-01-17T18:08:52.444Z",
-    "size": 196,
-    "path": "../public/logos/.gitkeep"
-  },
-  "/manifest.json": {
-    "type": "application/json",
-    "etag": "\"2ee-455gmmElsmUZOfE5tg620vbEr78\"",
-    "mtime": "2026-01-17T19:04:20.097Z",
-    "size": 750,
-    "path": "../public/manifest.json"
-  },
-  "/_nuxt/D06VOY2C.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"cf-G7CES3lFtKwRKdyfVHuAdr/PxYg\"",
-    "mtime": "2026-02-27T00:11:47.840Z",
-    "size": 207,
-    "path": "../public/_nuxt/D06VOY2C.js"
-  },
   "/logos/README.md": {
     "type": "text/markdown; charset=utf-8",
     "etag": "\"4fc-YjWJYh6iFlGeU3pDPViG1o14K/w\"",
     "mtime": "2026-01-17T18:08:59.639Z",
     "size": 1276,
     "path": "../public/logos/README.md"
+  },
+  "/_nuxt/BwkNq3E4.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"cf-A3OmBHLu4bdbCfRx5rGyR1qmkwc\"",
+    "mtime": "2026-02-27T00:21:38.010Z",
+    "size": 207,
+    "path": "../public/_nuxt/BwkNq3E4.js"
   },
   "/logos/logo.jpeg": {
     "type": "image/jpeg",
@@ -4546,51 +4546,44 @@ const assets = {
   "/_nuxt/index.CnSwj-jD.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"c29-4Z7PIjQRhPCItUpYZ/fg95vOsfA\"",
-    "mtime": "2026-02-27T00:11:47.839Z",
+    "mtime": "2026-02-27T00:21:38.010Z",
     "size": 3113,
     "path": "../public/_nuxt/index.CnSwj-jD.css"
+  },
+  "/_nuxt/builds/latest.json": {
+    "type": "application/json",
+    "etag": "\"47-HoCPWpAX8TbY9e/MH+LlXJiIfXY\"",
+    "mtime": "2026-02-27T00:21:39.990Z",
+    "size": 71,
+    "path": "../public/_nuxt/builds/latest.json"
   },
   "/_nuxt/entry.miEKPELK.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"a07a-zBvI3Gkl5Hn4TOQSouDW8H40x3I\"",
-    "mtime": "2026-02-27T00:11:47.840Z",
+    "mtime": "2026-02-27T00:21:38.008Z",
     "size": 41082,
     "path": "../public/_nuxt/entry.miEKPELK.css"
   },
-  "/_nuxt/builds/latest.json": {
+  "/_nuxt/builds/meta/4d2299c1-28e6-4c09-a894-be8bc3860329.json": {
     "type": "application/json",
-    "etag": "\"47-Bdf7Q9HukYsTAuPU3yLZPml0fQk\"",
-    "mtime": "2026-02-27T00:11:49.898Z",
-    "size": 71,
-    "path": "../public/_nuxt/builds/latest.json"
-  },
-  "/_nuxt/builds/meta/710ba479-d2c5-4479-862b-7aaafa80c00c.json": {
-    "type": "application/json",
-    "etag": "\"8b-bc6VdDZKACilmiPyDe6FhUC+6/U\"",
-    "mtime": "2026-02-27T00:11:49.899Z",
+    "etag": "\"8b-A/1g0ioZwWZ1agwuVtOIZl8ezJk\"",
+    "mtime": "2026-02-27T00:21:39.991Z",
     "size": 139,
-    "path": "../public/_nuxt/builds/meta/710ba479-d2c5-4479-862b-7aaafa80c00c.json"
+    "path": "../public/_nuxt/builds/meta/4d2299c1-28e6-4c09-a894-be8bc3860329.json"
   },
-  "/_nuxt/CbIVOXWP.js": {
+  "/_nuxt/CHrSOdtk.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"2b85e-dTBZH+ciID6h2Eqbcm1q0u4mmnU\"",
-    "mtime": "2026-02-27T00:11:47.840Z",
+    "etag": "\"2b85e-OBfqVs/iF1zlxpkPzkOSpb/kcNo\"",
+    "mtime": "2026-02-27T00:21:38.010Z",
     "size": 178270,
-    "path": "../public/_nuxt/CbIVOXWP.js"
+    "path": "../public/_nuxt/CHrSOdtk.js"
   },
-  "/_nuxt/iTLQvR1d.js": {
+  "/_nuxt/ClwT9txY.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"3b773-jHPm3vY87wsvoJ+cTvpr5WLbawg\"",
-    "mtime": "2026-02-27T00:11:47.840Z",
-    "size": 243571,
-    "path": "../public/_nuxt/iTLQvR1d.js"
-  },
-  "/Gemini_Generated_Image_w1gxe3w1gxe3w1gx.png": {
-    "type": "image/png",
-    "etag": "\"873dfe-8unzVAIy+Llvt4D+IJN2T1zaW40\"",
-    "mtime": "2026-01-17T18:02:15.054Z",
-    "size": 8863230,
-    "path": "../public/Gemini_Generated_Image_w1gxe3w1gxe3w1gx.png"
+    "etag": "\"3b771-i39DYrza23mMz/3scePJXtWIJ94\"",
+    "mtime": "2026-02-27T00:21:38.010Z",
+    "size": 243569,
+    "path": "../public/_nuxt/ClwT9txY.js"
   },
   "/sistema-gestao-restaurante-oohhfood.png": {
     "type": "image/png",
@@ -4598,6 +4591,13 @@ const assets = {
     "mtime": "2026-02-27T00:06:26.101Z",
     "size": 8863230,
     "path": "../public/sistema-gestao-restaurante-oohhfood.png"
+  },
+  "/Gemini_Generated_Image_w1gxe3w1gxe3w1gx.png": {
+    "type": "image/png",
+    "etag": "\"873dfe-8unzVAIy+Llvt4D+IJN2T1zaW40\"",
+    "mtime": "2026-01-17T18:02:15.054Z",
+    "size": 8863230,
+    "path": "../public/Gemini_Generated_Image_w1gxe3w1gxe3w1gx.png"
   }
 };
 

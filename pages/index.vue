@@ -108,7 +108,7 @@ if (!loja.value) {
   useHead({
     title: tenant.value 
       ? `${tenant.value} - OohhFood` 
-      : 'OohhFood - Sistema Completo para Restaurantes',
+      : 'OohhFood',
     meta: [
       { 
         name: 'description', 
